@@ -1,0 +1,267 @@
+#face{
+    width: 200px;
+    height: 200px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    box-shadow: 10px 0 25px rgba(14, 14, 14, 0.938);
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin: top 50px;
+    background-color:beige;
+    
+}
+
+#eye1{
+    width: 30px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    animation: blink 0.3s infinite;
+}
+@keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+#eye2{
+    width: 30px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    animation: blink 0.4s infinite;
+}
+@keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+#eyes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+#iris1{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+#iris2{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 10px;
+    margin-left : 10px;
+}
+#tongue{
+    width: 25px;
+    height: 22px;
+    background-color: red;
+    border-radius: 0% 0% 50% 50%;
+    position: relative;
+    top: 16px;
+    left: 20px;
+    animation: tt 2s infinite;
+
+}
+@keyframes tt{
+    from{height:4px;}
+    to{height:30px}
+}
+#mouth{
+    width: 60px;
+    height: 20px;
+    background-color: black;
+    border-radius: 0% 0% 50% 50%;
+    position: relative;
+    top: 30px;
+    left: 70px;
+}
+.robot {
+  width: 100px;
+  height: 200px;
+  margin-top: 50px;
+}
+
+.head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+    box-shadow: 10px 0 25px rgba(14, 14, 14, 0.938);
+  width: 200px;
+  height: 200px;
+  background-color:#FFC67D;
+  border-radius: 50%;
+  animation: head-bob 1s infinite;
+}
+
+.body {
+  position: absolute;
+  top: 220px;
+  left: 50%;
+transform: translateX(-50%);
+  width: 160px;
+  height: 300px;
+  border-radius:20px ;
+  background-color: rgba(201, 182, 10, 0.71);
+}
+.arm {
+  position: absolute;
+  top: 270px;
+  width: 40px;
+  height: 150px;
+  background-color: lightyellow;
+  border-radius: 20px; 
+  animation: arm-wave 1s infinite;
+  transition: transform 0.5s;
+}
+
+.left-arm {
+  left: 20px;
+  animation-delay: 0.5s;
+  margin: -30px;
+
+}
+
+.right-arm {
+  right: 20px;
+  margin: -30px;
+}
+
+.leg {
+  position: absolute;
+  bottom:-450px;
+  width: 40px;
+  height: 140px;
+  background-color: lightslategray;
+  border-radius: 20px;
+  animation: leg-move 1s infinite;
+  transition: transform 0.5s;
+}
+
+.left-leg {
+  left: 30px;
+}
+
+.right-leg {
+  right: 30px;
+}
+@keyframes head-bob {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes arm-wave {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes leg-move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes robot-dance {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.robot {
+  animation: robot-dance 2s infinite;
+}
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+.robot {
+  animation: run 2s infinite alternate;
+}
+body {
+  background: linear-gradient(to right, #ebb8b8,#16eedcaf,#00ff00a7,#ffff009c,#ff00ffac,#f0f0f0 );
+  background-size: 400% 400%;
+  animation: party 3s ease infinite;
+}
+
+@keyframes party {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes raise-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(-20px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+  .hat {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 30px;
+  background-color: #136415d7; 
+  border-radius: 10px 10px 0 0;
+}
+#aud{
+  margin-top: 600px;
+  margin-left: 250px;
+}
